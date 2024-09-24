@@ -35,6 +35,21 @@
 				</a>
 			</div>
 
+			<div class="category-search">
+				<form role="search" action="/search" method="get" class="form-inline">
+					<div class="input-group align-items-center">
+						<input type="text" name="query" placeholder="Search topics..." class="form-control">
+						<input type="hidden" name="cid" value="${cid}">
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-primary btn-sm d-flex align-items-center">
+								<i class="fa fa-search"></i> Search
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
 			<div class="d-flex gap-1 align-items-center">
 				{{{ if template.category }}}
 					{{{ if privileges.topics:create }}}
