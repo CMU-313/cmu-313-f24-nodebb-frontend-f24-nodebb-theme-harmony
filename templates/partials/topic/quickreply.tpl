@@ -13,6 +13,15 @@
 			<textarea rows="4" name="content" component="topic/quickreply/text" class="form-control mousetrap" placeholder="[[modules:composer.textarea.placeholder]]"></textarea>
 			<div class="imagedrop"><div>[[topic:composer.drag-and-drop-images]]</div></div>
 		</div>
+
+		<!-- Checkbox for Anonymous Posting Here -->
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" component="topic/quickreply/anonymousCheckbox">
+				<label class="form-check-label" for="anonymousCheckbox">
+					Submit as Anonymous
+				</label>
+			</div>
+
 		<div>
 			<div class="d-flex justify-content-end gap-2">
 				<button type="submit" component="topic/quickreply/expand" class="btn-ghost-sm border" title="[[topic:open-composer]]"><i class="fa fa-expand"></i></button>
