@@ -36,17 +36,14 @@
 			</div>
 
 			<div class="category-search">
+				{{{ if template.category }}}
 				<form role="search" action="/search" method="get" class="form-inline">
 					<div class="input-group align-items-center">
-						<input type="text" name="query" placeholder="Search topics..." class="form-control">
-						<input type="hidden" name="cid" value="${cid}">
-						<div class="input-group-append">
-							<button type="submit" class="btn btn-primary btn-sm d-flex align-items-center">
-								<i class="fa fa-search"></i> Search
-							</button>
-						</div>
+						<!-- IMPORT partials/category/search-bar.tpl -->
+						<!-- IMPORT partials/buttons/search.tpl -->
 					</div>
 				</form>
+				{{{ end }}}
 			</div>
 
 
