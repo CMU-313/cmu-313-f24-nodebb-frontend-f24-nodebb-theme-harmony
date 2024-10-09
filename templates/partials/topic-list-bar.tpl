@@ -30,6 +30,25 @@
 				<a class="btn-ghost-sm d-none d-lg-flex align-self-stretch" target="_blank" href="{rssFeedUrl}" itemprop="item" title="[[global:rss-feed]]"><i class="fa fa-rss text-primary"></i></a>
 				{{{ end }}}
 
+				<div class="search">
+					<div class="input-group flex-nowrap w-auto">
+						<form component="search/form" id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
+							<div class="d-flex gap-1">
+								<input type="text" class="form-control form-control-sm w-auto" placeholder="[[global:search]]" name="query" value="{query}" aria-label="[[search:type-to-search]]" autocomplete="off">
+								<button class="btn btn-primary btn-sm" type="submit" aria-label="[[global:search]]"><i class="fa fa-search"></i></button>
+							</div>
+							<div id="quick-search-container" class="quick-search-container d-block mt-2 hidden">
+								<div class="form-check filter-category mb-2 ms-2">
+									<input class="form-check-input" type="checkbox" checked>
+									<label class="form-check-label name text-sm"></label>
+								</div>
+								<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
+								<div class="quick-search-results-container"></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
 				<a href="{{{ if template.category }}}{url}{{{ else }}}{config.relative_path}/{selectedFilter.url}{querystring}{{{ end }}}" class="btn btn-secondary fw-semibold position-absolute top-100 translate-middle-x start-50 mt-1 hide" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" id="new-topics-alert">
 					<i class="fa fa-fw fa-arrow-up"></i> [[recent:load-new-posts]]
 				</a>
