@@ -21,6 +21,14 @@
 						</div>
 
 						<div class="mb-2 d-flex flex-column gap-2">
+							<label for="fullname">[[register:fullname]]</label>
+							<div class="d-flex flex-column">
+								<input class="form-control" type="text" placeholder="[[register:fullname-placeholder]]" name="fullname" id="fullname" autocorrect="off" autocapitalize="words" autocomplete="name" aria-required="true" aria-describedby="fullname-notify"/>
+								<span class="register-feedback text-xs text-danger" id="fullname-notify" aria-live="polite"></span>
+							</div>
+						</div>					
+
+						<div class="mb-2 d-flex flex-column gap-2">
 							<label for="password">[[register:password]]</label>
 							<div class="d-flex flex-column">
 								<input class="form-control" type="password" placeholder="[[register:password-placeholder]]" name="password" id="password" autocomplete="new-password" autocapitalize="off" aria-required="true" aria-describedby="password-notify"/>
@@ -39,6 +47,8 @@
 								<span class="register-feedback text-xs text-danger" id="password-confirm-notify" aria-live="polite"></span>
 							</div>
 						</div>
+
+						
 
 						{{{ each regFormEntry }}}
 						<div class="mb-2 regFormEntry d-flex flex-column gap-2 {./styleName}">
