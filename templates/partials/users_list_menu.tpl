@@ -7,10 +7,8 @@
 	<a class="btn-ghost ff-secondary fw-semibold" href="{config.relative_path}/users?section=sort-reputation">[[users:most-reputation]]</a>
 	{{{ end }}}
 
-	<a class="btn-ghost ff-secondary fw-semibold" href="{config.relative_path}/users?section=sort-followers">[[users:sort-followers]]</a>
-
 	{{{ if isAdminOrGlobalMod }}}
-	<a class="btn-ghost ff-secondary fw-semibold" href="{config.relative_path}/users?section=flagged">[[users:most-flags] ]</a>
+	<a class="btn-ghost ff-secondary fw-semibold" href="{config.relative_path}/users?section=flagged">[[users:most-flags]]</a>
 
 	<a class="btn-ghost ff-secondary fw-semibold" href="{config.relative_path}/users?section=banned">[[user:banned]]</a>
 	{{{ end }}}

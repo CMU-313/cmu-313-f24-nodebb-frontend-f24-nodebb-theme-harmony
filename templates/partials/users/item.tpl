@@ -33,12 +33,5 @@
 			<span>{formattedNumber(./flags)}</span>
 		</div>
 		{{{ end }}}
-
-		{{{ if section_sort-followers }}}
-		<div class="text-xs text-muted text-truncate">
-			<span>{formattedNumber(./followerCount)}</span>
-		</div>
-		{{{ end }}}
-
 	</div>
 </a>
