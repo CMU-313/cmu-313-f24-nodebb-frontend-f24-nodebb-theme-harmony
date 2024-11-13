@@ -25,7 +25,7 @@
 			</div>
 
 			<a class="fw-bold text-nowrap" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
-
+			<span class="badge bg-info text-white ms-2">{posts.user.role}</span>
 			{{{ each posts.user.selectedGroups }}}
 			{{{ if posts.user.selectedGroups.slug }}}
 			<!-- IMPORT partials/groups/badge.tpl -->
@@ -62,6 +62,14 @@
 		<div class="content mt-2 text-break" component="post/content" itemprop="text">
 			{posts.content}
 		</div>
+		 {{{if !posts.isEnglish }}}
+		        <div class="sensitive-content-message">
+		        <a class="btn btn-sm btn-primary view-translated-btn">Click here to view the translated message.</a>
+		        </div>
+		        <div class="translated-content" style="display:none;">
+		        {posts.translatedContent}
+		        </div>
+	        {{{end}}}
 	</div>
 </div>
 
